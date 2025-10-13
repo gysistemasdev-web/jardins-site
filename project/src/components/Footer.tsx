@@ -27,8 +27,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-slate-300 leading-relaxed mb-6 max-w-md">
-              Transformamos espaços verdes com paixão e profissionalismo. 
-              Da Inglaterra a Portugal, criamos jardins que inspiram e encantam.
+                Jardinagem, paisagismo e serviços especializados
             </p>
             <div className="flex items-center space-x-4">
               {/* Instagram */}

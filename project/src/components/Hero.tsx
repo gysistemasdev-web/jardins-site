@@ -39,9 +39,9 @@ const Hero = () => {
           <div className="text-white space-y-8">
             <div className="space-y-6">
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                Jardins que
+                  Jardinagem e
                 <span className="block bg-gradient-to-r from-emerald-300 to-green-200 bg-clip-text text-transparent">
-                  inspiram
+                  paisagismo profissional
                 </span>
               </h1>
 
