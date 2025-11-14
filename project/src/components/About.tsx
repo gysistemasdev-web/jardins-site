@@ -5,20 +5,23 @@ const About = () => {
   return (
     <section id="about" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
+
+        {/* Título da seção */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 bg-emerald-100 text-emerald-700 rounded-full font-medium mb-4">
-            Nossa Jornada
+            Sobre nós
           </div>
+
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-800 mb-6">
-            De Londres a Cascais
+            Gardening around the globe
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Uma história de paixão pela jardinagem que atravessou fronteiras
-          </p>
+
+          {/* Frase removida */}
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Lado da imagem (agora sem corte) */}
+
+          {/* Imagem */}
           <div className="relative">
             <div className="relative rounded-3xl bg-slate-50 border border-slate-200 p-2">
               <img
@@ -43,12 +46,13 @@ const About = () => {
             </div>
           </div>
 
-          {/* Lado do conteúdo */}
+          {/* Conteúdo de texto */}
           <div className="space-y-8">
             <div className="space-y-6">
               <h3 className="text-2xl font-bold text-slate-800">
                 JARDINS SÃO PAULO
               </h3>
+
               <div className="space-y-4 text-slate-600 leading-relaxed text-justify">
                 <p>
                   Uma história que começa em 2019 no norte de Londres, através da assistência
@@ -58,6 +62,7 @@ const About = () => {
                   mini golf pit, canteiros em deck, jardim vertical, área externa em deck; dentre outros
                   serviços de manutenção.
                 </p>
+
                 <p>
                   Desde 2022, atendemos a região de Cascais e Sintra, nos mais variados serviços como soluções
                   em deck, colocação de relva artificial, instalação e manutenção de tapetes de relva natural,
@@ -67,13 +72,14 @@ const About = () => {
               </div>
             </div>
 
-            {/* Métricas */}
+            {/* Métricas atualizadas */}
             <div className="grid grid-cols-2 gap-6">
               <div className="bg-slate-50 rounded-2xl p-6 text-center">
                 <Users className="w-8 h-8 text-emerald-600 mx-auto mb-3" />
-                <div className="font-bold text-2xl text-slate-800 mb-1">6+</div>
+                <div className="font-bold text-2xl text-slate-800 mb-1">5+</div>
                 <div className="text-slate-600 text-sm">Anos de experiência</div>
               </div>
+
               <div className="bg-slate-50 rounded-2xl p-6 text-center">
                 <MapPin className="w-8 h-8 text-emerald-600 mx-auto mb-3" />
                 <div className="font-bold text-2xl text-slate-800 mb-1">2</div>
@@ -81,23 +87,7 @@ const About = () => {
               </div>
             </div>
 
-            {/* Linha do tempo */}
-            <div className="space-y-4">
-              <div className="flex items-center space-x-4">
-                <div className="w-3 h-3 bg-emerald-500 rounded-full"></div>
-                <div>
-                  <div className="font-semibold text-slate-800">2019 - Londres</div>
-                  <div className="text-slate-600">Início da atividade no Reino Unido</div>
-                </div>
-              </div>
-              <div className="flex items-center space-x-4">
-                <div className="w-3 h-3 bg-emerald-500 rounded-full"></div>
-                <div>
-                  <div className="font-semibold text-slate-800">2022 - Portugal</div>
-                  <div className="text-slate-600">Expansão para Cascais e região</div>
-                </div>
-              </div>
-            </div>
+            {/* Linha do tempo removida */}
           </div>
         </div>
       </div>
