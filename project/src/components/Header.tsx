@@ -53,14 +53,14 @@ const Header = () => {
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            {/* Logo + Desde 2019 */}
-            <div className="flex items-center space-x-3">
+            
+            {/* Logo sem texto "Desde 2019" */}
+            <div className="flex items-center">
               <img
                 src="https://raw.githubusercontent.com/gysistemasdev-web/JARDINS-S-O-PAULO/2f0787c6d3668599d4a809b4aa5dc1a7df9475e6/logoJSP-1cor.png"
                 alt="Logo Jardins São Paulo"
                 className="h-14 w-auto"
               />
-              <p className="text-sm text-emerald-600 font-medium">Desde 2019</p>
             </div>
 
             {/* Desktop Navigation */}
@@ -76,38 +76,23 @@ const Header = () => {
                 </button>
               ))}
 
-              {/* Botões de tradução (só bandeiras redondas) */}
+              {/* Botões idioma */}
               <div className="flex items-center space-x-2 ml-4">
                 <button
                   onClick={() => changeLanguage('pt')}
                   className="w-9 h-9 rounded-full overflow-hidden border border-slate-200 shadow hover:scale-105 transition"
                 >
-                  <img
-                    src="https://flagcdn.com/pt.svg"
-                    alt="Português"
-                    className="w-full h-full object-cover"
-                  />
+                  <img src="https://flagcdn.com/pt.svg" alt="Português" className="w-full h-full object-cover" />
                 </button>
+
                 <button
                   onClick={() => changeLanguage('en')}
                   className="w-9 h-9 rounded-full overflow-hidden border border-slate-200 shadow hover:scale-105 transition"
                 >
-                  <img
-                    src="https://flagcdn.com/us.svg"
-                    alt="English"
-                    className="w-full h-full object-cover"
-                  />
+                  <img src="https://flagcdn.com/us.svg" alt="English" className="w-full h-full object-cover" />
                 </button>
               </div>
             </nav>
-
-            {/* CTA Button */}
-            <button
-              onClick={() => scrollToSection('#contact')}
-              className="hidden lg:flex items-center px-6 py-3 bg-gradient-to-r from-emerald-600 to-green-500 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-emerald-500/25 transform hover:-translate-y-1 transition-all duration-300"
-            >
-              Orçamento Grátis
-            </button>
 
             {/* Mobile Menu Button */}
             <button
@@ -130,11 +115,10 @@ const Header = () => {
           className="absolute inset-0 bg-black/20 backdrop-blur-sm"
           onClick={() => setIsMobileMenuOpen(false)}
         ></div>
+
         <div
           className={`absolute top-20 right-6 left-6 bg-white rounded-3xl shadow-2xl border border-slate-200 p-6 transform transition-all duration-300 ${
-            isMobileMenuOpen
-              ? 'translate-y-0 scale-100'
-              : '-translate-y-4 scale-95'
+            isMobileMenuOpen ? 'translate-y-0 scale-100' : '-translate-y-4 scale-95'
           }`}
         >
           <nav className="space-y-2">
@@ -147,34 +131,21 @@ const Header = () => {
                 {item.label}
               </button>
             ))}
-            <button
-              onClick={() => scrollToSection('#contact')}
-              className="w-full mt-4 px-6 py-3 bg-gradient-to-r from-emerald-600 to-green-500 text-white font-semibold rounded-2xl"
-            >
-              Orçamento Grátis
-            </button>
 
-            {/* Botões de tradução no mobile */}
+            {/* Botões idioma no mobile */}
             <div className="flex justify-center space-x-3 mt-6">
               <button
                 onClick={() => changeLanguage('pt')}
                 className="w-10 h-10 rounded-full overflow-hidden border border-slate-200 shadow hover:scale-105 transition"
               >
-                <img
-                  src="https://flagcdn.com/pt.svg"
-                  alt="Português"
-                  className="w-full h-full object-cover"
-                />
+                <img src="https://flagcdn.com/pt.svg" alt="Português" className="w-full h-full object-cover" />
               </button>
+
               <button
                 onClick={() => changeLanguage('en')}
                 className="w-10 h-10 rounded-full overflow-hidden border border-slate-200 shadow hover:scale-105 transition"
               >
-                <img
-                  src="https://flagcdn.com/us.svg"
-                  alt="English"
-                  className="w-full h-full object-cover"
-                />
+                <img src="https://flagcdn.com/us.svg" alt="English" className="w-full h-full object-cover" />
               </button>
             </div>
           </nav>
