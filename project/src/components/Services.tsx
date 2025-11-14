@@ -1,5 +1,5 @@
 import React from 'react';
-import { Leaf, Hammer, Sparkles } from 'lucide-react';
+import { Leaf, Hammer, Sparkles, Lightbulb } from 'lucide-react';
 
 const Services = () => {
   // Helper de lista com verde musgo
@@ -9,6 +9,11 @@ const Services = () => {
       <span className="text-slate-700 leading-relaxed">{text}</span>
     </li>
   );
+
+  // 🔥 FUTURO ADMIN:
+  // Este campo será substituído por conteúdo vindo de um painel administrativo (CMS)
+  const weeklyTip =
+    "Prefira espécies nativas: elas exigem menos água, se adaptam melhor ao clima e tornam o jardim mais sustentável.";
 
   return (
     <section id="services" className="py-24 bg-slate-50">
@@ -104,6 +109,37 @@ const Services = () => {
             </button>
           </div>
         </div>
+
+        {/* 🌿 DICA DA SEMANA — BLOCO COMPLETO */}
+        <div className="mt-24">
+          <div className="bg-[#F6F3EC] border border-[#556B2F] rounded-3xl p-10 shadow-xl max-w-4xl mx-auto 
+              animate-[fadeInUp_0.7s_ease-out]">
+
+            <div className="flex items-start space-x-4">
+              <Lightbulb className="w-10 h-10 text-[#556B2F]" />
+
+              <div>
+                <h3 className="text-2xl font-bold text-[#3F4A3C] mb-3">
+                  Dica da Semana
+                </h3>
+
+                <p className="text-[#4A5542] text-lg leading-relaxed">
+                  {weeklyTip}
+                </p>
+
+                {/* Botão "Ver mais dicas" animado */}
+                <button
+                  className="mt-6 px-6 py-3 rounded-xl border-2 border-[#556B2F] text-[#556B2F] font-semibold 
+                    hover:bg-[#556B2F] hover:text-white transition-all duration-300
+                    hover:shadow-lg hover:-translate-y-1"
+                >
+                  Ver mais dicas
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );
