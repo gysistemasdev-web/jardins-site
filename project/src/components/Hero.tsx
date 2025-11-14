@@ -28,7 +28,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-[rgba(40,40,20,0.45)] mix-blend-multiply"></div>
       </div>
 
-      {/* Floating Elements (verde musgo suave) */}
+      {/* Floating Elements */}
       <div className="absolute top-1/4 left-10 w-32 h-32 bg-[#556B2F]/20 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute bottom-1/3 right-16 w-48 h-48 bg-[#6B8E23]/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
 
@@ -46,7 +46,19 @@ const Hero = () => {
                   serviços adicionais
                 </span>
               </h1>
+            </div>
 
+            {/* ⭐ DICA DA SEMANA */}
+            <div
+              className="bg-[#F6F3EC]/90 border border-[#556B2F] rounded-2xl p-4 shadow-md backdrop-blur-sm 
+              animate-[fadeSlide_0.6s_ease-out_forwards]"
+            >
+              <div className="flex items-start space-x-3">
+                <span className="text-[#556B2F] text-xl">💡</span>
+                <p className="text-[#3F4A3C] leading-relaxed font-medium">
+                  <strong>Dica da Semana:</strong> Prefira espécies nativas — elas exigem menos manutenção e se adaptam melhor ao clima.
+                </p>
+              </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -65,7 +77,6 @@ const Hero = () => {
 
           {/* Right Content - Stats Cards */}
           <div className="grid grid-cols-2 gap-6">
-            {/* Card */}
             <div className="bg-[#F5F0E6]/20 backdrop-blur-xl rounded-3xl p-6 border border-[#556B2F]/30">
               <div className="text-3xl font-bold text-white mb-2">5+</div>
               <div className="text-[#D7DBC8]">Anos de experiência</div>
