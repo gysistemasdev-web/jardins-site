@@ -72,17 +72,21 @@ const Portfolio = () => {
   };
 
   return (
-    <section id="portfolio" className="py-24 bg-slate-50">
+    <section id="portfolio" className="py-24 bg-[#F6F3EC]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
+
+        {/* Cabeçalho */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-emerald-100 text-emerald-700 rounded-full font-medium mb-4">
-            Nossos Trabalhos
+          <div className="inline-flex items-center px-4 py-2 bg-[#E2E8E2] text-[#3F4A3C] rounded-full font-medium mb-4">
+            Projetos realizados
           </div>
+
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-800 mb-6">
-            Projetos Realizados
+            Projetos realizados
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Cada projeto é único e reflete nossa dedicação à excelência
+
+          <p className="text-xl text-slate-700 max-w-3xl mx-auto">
+            Conheça alguns projetos que Jardins São Paulo concluiu entre Londres e Cascais
           </p>
         </div>
 
@@ -94,8 +98,8 @@ const Portfolio = () => {
               onClick={() => setActiveCategory(category)}
               className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                 activeCategory === category
-                  ? 'bg-emerald-600 text-white shadow-lg'
-                  : 'bg-white text-slate-600 hover:bg-emerald-50 hover:text-emerald-600'
+                  ? 'bg-[#556B2F] text-white shadow-lg'
+                  : 'bg-white text-slate-600 hover:bg-[#E8E6DF] hover:text-[#3F4A3C]'
               }`}
             >
               {category}
@@ -119,18 +123,18 @@ const Portfolio = () => {
                 />
               </div>
 
-              {/* Overlay */}
+              {/* Overlay escurecido */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
               {/* Content */}
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                 <div className="mb-2">
-                  <span className="inline-block px-3 py-1 bg-emerald-500 text-white text-xs font-medium rounded-full">
+                  <span className="inline-block px-3 py-1 bg-[#556B2F] text-white text-xs font-medium rounded-full">
                     {item.category}
                   </span>
                 </div>
                 <h3 className="text-xl font-bold mb-1">{item.title}</h3>
-                <p className="text-emerald-200 text-sm">{item.location}</p>
+                <p className="text-[#C8D3C1] text-sm">{item.location}</p>
               </div>
 
               {/* View Icon */}
@@ -141,20 +145,7 @@ const Portfolio = () => {
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="mt-16 text-center">
-          <p className="text-slate-600 mb-6">
-            Gostou do que viu? Vamos criar algo único para si também.
-          </p>
-          <button
-            onClick={() =>
-              document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })
-            }
-            className="px-8 py-3 bg-gradient-to-r from-emerald-600 to-green-500 text-white font-semibold rounded-2xl hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
-          >
-            Iniciar Meu Projeto
-          </button>
-        </div>
+        {/* CTA removido */}
       </div>
 
       {/* Lightbox */}
@@ -196,7 +187,7 @@ const Portfolio = () => {
                 <h3 className="text-white font-bold text-lg">
                   {filteredItems[selectedImage].title}
                 </h3>
-                <p className="text-emerald-200">{filteredItems[selectedImage].location}</p>
+                <p className="text-[#C8D3C1]">{filteredItems[selectedImage].location}</p>
               </div>
             </div>
           </div>
