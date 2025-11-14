@@ -40,6 +40,14 @@ const Portfolio = () => {
       title: 'Jardinagem personalizada',
       location: 'Serviço contínuo',
       category: 'Manutenção'
+    },
+
+    // ✅ NOVO ITEM ADICIONADO
+    {
+      image: 'https://github.com/gysistemasdev-web/JARDINS-S-O-PAULO/blob/6874d209231cc6c2cb0d9032bea0c46cf5d0f76c/Golfe.jpeg?raw=true',
+      title: 'Mini Golf Pit',
+      location: 'Execução personalizada',
+      category: 'Paisagismo'
     }
   ];
 
@@ -51,13 +59,8 @@ const Portfolio = () => {
       ? portfolioItems
       : portfolioItems.filter((item) => item.category === activeCategory);
 
-  const openLightbox = (index: number) => {
-    setSelectedImage(index);
-  };
-
-  const closeLightbox = () => {
-    setSelectedImage(null);
-  };
+  const openLightbox = (index: number) => setSelectedImage(index);
+  const closeLightbox = () => setSelectedImage(null);
 
   const navigateImage = (direction: 'prev' | 'next') => {
     if (selectedImage === null) return;
@@ -90,7 +93,7 @@ const Portfolio = () => {
           </p>
         </div>
 
-        {/* Category Filter */}
+        {/* Filtro */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
           {categories.map((category) => (
             <button
@@ -107,7 +110,7 @@ const Portfolio = () => {
           ))}
         </div>
 
-        {/* Portfolio Grid */}
+        {/* Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredItems.map((item, index) => (
             <div
@@ -123,29 +126,25 @@ const Portfolio = () => {
                 />
               </div>
 
-              {/* Overlay escurecido */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
-              {/* Content */}
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                 <div className="mb-2">
                   <span className="inline-block px-3 py-1 bg-[#556B2F] text-white text-xs font-medium rounded-full">
                     {item.category}
                   </span>
                 </div>
+
                 <h3 className="text-xl font-bold mb-1">{item.title}</h3>
                 <p className="text-[#C8D3C1] text-sm">{item.location}</p>
               </div>
 
-              {/* View Icon */}
               <div className="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <ExternalLink className="w-5 h-5 text-white" />
               </div>
             </div>
           ))}
         </div>
-
-        {/* CTA removido */}
       </div>
 
       {/* Lightbox */}
@@ -158,7 +157,6 @@ const Portfolio = () => {
               className="max-w-full max-h-screen rounded-2xl"
             />
 
-            {/* Close Button */}
             <button
               onClick={closeLightbox}
               className="absolute top-4 right-4 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
@@ -166,7 +164,6 @@ const Portfolio = () => {
               <X className="w-6 h-6" />
             </button>
 
-            {/* Navigation */}
             <button
               onClick={() => navigateImage('prev')}
               className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
@@ -181,7 +178,6 @@ const Portfolio = () => {
               <ChevronRight className="w-6 h-6" />
             </button>
 
-            {/* Caption */}
             <div className="absolute bottom-4 left-4 right-4 text-center">
               <div className="bg-black/50 backdrop-blur-sm rounded-2xl py-3 px-6 inline-block">
                 <h3 className="text-white font-bold text-lg">
