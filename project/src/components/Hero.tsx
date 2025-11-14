@@ -16,9 +16,9 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
-      
+
       {/* Background with Parallax */}
-      <div 
+      <div
         className="absolute inset-0"
         style={{ transform: `translateY(${scrollY * 0.3}px)` }}
       >
@@ -33,18 +33,20 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          
+
           {/* Left Content */}
           <div className="text-white space-y-8">
             <div className="space-y-6">
+
+              {/* Título corrigido */}
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                JARDINAGEM, PAISAGISMO E 
+                JARDINAGEM, PAISAGISMO E
                 <span className="block bg-gradient-to-r from-emerald-300 to-green-200 bg-clip-text text-transparent">
                   SERVIÇOS ADICIONAIS
                 </span>
               </h1>
 
-              {/* Frase apagada — removido completamente */}
+              {/* Subtítulo removido */}
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -56,7 +58,7 @@ const Hero = () => {
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
 
-              {/* Infos removidas: Desde 2019 / Londres & Portugal */}
+              {/* Infos removidas */}
             </div>
           </div>
 
@@ -82,6 +84,7 @@ const Hero = () => {
               <div className="text-emerald-200">Resposta rápida</div>
             </div>
           </div>
+
         </div>
       </div>
 
@@ -91,6 +94,7 @@ const Hero = () => {
           <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-bounce"></div>
         </div>
       </div>
+
     </section>
   );
 };
