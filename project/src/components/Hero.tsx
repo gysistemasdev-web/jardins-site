@@ -38,15 +38,15 @@ const Hero = () => {
           <div className="text-white space-y-8">
             <div className="space-y-6">
 
-              {/* Título corrigido */}
+              {/* Título igual ao original, apenas com o texto atualizado */}
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                JARDINAGEM, PAISAGISMO E
+                Jardinagem, paisagismo e
                 <span className="block bg-gradient-to-r from-emerald-300 to-green-200 bg-clip-text text-transparent">
-                  SERVIÇOS ADICIONAIS
+                  serviços adicionais
                 </span>
               </h1>
 
-              {/* Subtítulo removido */}
+              {/* frase removida */}
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -58,7 +58,7 @@ const Hero = () => {
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
 
-              {/* Infos removidas */}
+              {/* Infos abaixo removidas */}
             </div>
           </div>
 
