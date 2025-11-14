@@ -8,15 +8,13 @@ const About = () => {
 
         {/* Título da seção */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-emerald-100 text-emerald-700 rounded-full font-medium mb-4">
+          <div className="inline-flex items-center px-4 py-2 bg-[#e5e2d8] text-[#556B2F] rounded-full font-medium mb-4">
             Sobre nós
           </div>
 
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-800 mb-6">
             Gardening around the globe
           </h2>
-
-          {/* Frase removida */}
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -35,7 +33,7 @@ const About = () => {
             {/* Selo flutuante */}
             <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-6 shadow-2xl border border-slate-100">
               <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-green-400 rounded-xl flex items-center justify-center">
+                <div className="w-12 h-12 bg-[#556B2F] rounded-xl flex items-center justify-center">
                   <Award className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -46,7 +44,7 @@ const About = () => {
             </div>
           </div>
 
-          {/* Conteúdo de texto */}
+          {/* Conteúdo */}
           <div className="space-y-8">
             <div className="space-y-6">
               <h3 className="text-2xl font-bold text-slate-800">
@@ -72,22 +70,21 @@ const About = () => {
               </div>
             </div>
 
-            {/* Métricas atualizadas */}
+            {/* Métricas */}
             <div className="grid grid-cols-2 gap-6">
               <div className="bg-slate-50 rounded-2xl p-6 text-center">
-                <Users className="w-8 h-8 text-emerald-600 mx-auto mb-3" />
+                <Users className="w-8 h-8 text-[#556B2F] mx-auto mb-3" />
                 <div className="font-bold text-2xl text-slate-800 mb-1">5+</div>
                 <div className="text-slate-600 text-sm">Anos de experiência</div>
               </div>
 
               <div className="bg-slate-50 rounded-2xl p-6 text-center">
-                <MapPin className="w-8 h-8 text-emerald-600 mx-auto mb-3" />
+                <MapPin className="w-8 h-8 text-[#556B2F] mx-auto mb-3" />
                 <div className="font-bold text-2xl text-slate-800 mb-1">2</div>
                 <div className="text-slate-600 text-sm">Países atendidos</div>
               </div>
             </div>
 
-            {/* Linha do tempo removida */}
           </div>
         </div>
       </div>
