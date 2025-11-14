@@ -11,12 +11,10 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
     if (!formData.name || !formData.email || !formData.message) {
       alert('Por favor, preencha todos os campos obrigatórios.');
       return;
     }
-
     alert('Mensagem enviada com sucesso! Entraremos em contacto em breve.');
     setFormData({ name: '', email: '', phone: '', message: '' });
   };
@@ -34,221 +32,226 @@ const Contact = () => {
       label: 'Telefone',
       value: '+351 939 363 007',
       href: 'tel:+351939363007',
-      color: 'from-emerald-500 to-green-400'
+      color: 'bg-[#556B2F]'
     },
     {
       icon: Mail,
       label: 'E-mail Principal',
       value: 'flavir@jardinssaopaulo.pt',
       href: 'mailto:flavir@jardinssaopaulo.pt',
-      color: 'from-green-500 to-lime-400'
+      color: 'bg-[#3F4A3C]'
     },
     {
       icon: Mail,
       label: 'E-mail Secundário',
       value: 'jacque@jardinssaopaulo.pt',
       href: 'mailto:jacque@jardinssaopaulo.pt',
-      color: 'from-lime-500 to-green-400'
+      color: 'bg-[#6B593A]'
     },
     {
       icon: MapPin,
       label: 'Localização',
       value: 'Cascais, Portugal',
       href: '#',
-      color: 'from-teal-500 to-emerald-400'
+      color: 'bg-[#5A6E3A]'
     }
   ];
 
   return (
-    <section id="contact" className="py-24 bg-white">
+    <section id="contact" className="py-24 bg-[#F6F3EC]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-emerald-100 text-emerald-700 rounded-full font-medium mb-4">
-            Fale Connosco
-          </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-slate-800 mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-[#3F4A3C] mb-6">
             Vamos Conversar
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Marque a sua visita técnica gratuita ou esclareça as suas dúvidas
+          <p className="text-xl text-[#5A6E3A] max-w-3xl mx-auto">
+            Marque a sua visita técnica gratuita ou esclareça as suas dúvidas.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-12">
+          
           {/* Contact Information */}
           <div className="lg:col-span-1 space-y-8">
-            {/* Contact Cards */}
+
             <div className="space-y-4">
               {contactInfo.map((info, index) => (
-                <div key={index} className="bg-slate-50 rounded-2xl p-6 hover:bg-white hover:shadow-lg transition-all duration-300">
+                <div 
+                  key={index} 
+                  className="bg-white rounded-2xl p-6 shadow-sm border border-[#DDD3C2]"
+                >
                   <div className="flex items-center">
-                    <div className={`w-12 h-12 bg-gradient-to-br ${info.color} rounded-xl flex items-center justify-center mr-4 shadow-lg`}>
+                    <div className={`w-12 h-12 ${info.color} rounded-xl flex items-center justify-center mr-4 shadow-md`}>
                       <info.icon className="w-6 h-6 text-white" />
                     </div>
+
                     <div className="flex-1">
-                      <p className="text-sm text-slate-600 font-medium">{info.label}</p>
+                      <p className="text-sm text-[#6F6A60] font-medium">{info.label}</p>
                       {info.href.startsWith('tel:') || info.href.startsWith('mailto:') ? (
                         <a 
                           href={info.href} 
-                          className="text-slate-800 font-semibold hover:text-emerald-600 transition-colors"
+                          className="text-[#3F4A3C] font-semibold hover:text-[#556B2F] transition-colors"
                         >
                           {info.value}
                         </a>
                       ) : (
-                        <p className="text-slate-800 font-semibold">{info.value}</p>
+                        <p className="text-[#3F4A3C] font-semibold">{info.value}</p>
                       )}
                     </div>
+
                   </div>
                 </div>
               ))}
             </div>
 
-            {/* Quick Actions */}
+            {/* WhatsApp & Instagram */}
             <div className="space-y-4">
+              
               <a
                 href="https://wa.me/351939363007?text=Olá!%20Vim%20pelo%20site.%20Quero%20um%20orçamento."
                 target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center w-full px-6 py-4 bg-gradient-to-r from-green-500 to-emerald-400 text-white font-semibold rounded-2xl hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+                className="flex items-center justify-center w-full px-6 py-4 bg-[#556B2F] text-white font-semibold rounded-2xl hover:opacity-90 transition-all"
               >
                 <MessageCircle className="w-5 h-5 mr-3" />
                 WhatsApp Direto
               </a>
-              
+
               <a
                 href="https://instagram.com/jardinssaopaulopt"
                 target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center w-full px-6 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-2xl hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+                className="flex items-center justify-center w-full px-6 py-4 bg-gradient-to-r from-[#603813] to-[#8E735B] text-white font-semibold rounded-2xl hover:opacity-90 transition-all"
               >
                 <Instagram className="w-5 h-5 mr-3" />
                 Seguir no Instagram
               </a>
+
             </div>
 
             {/* Business Hours */}
-            <div className="bg-gradient-to-br from-emerald-50 to-green-50 rounded-2xl p-6 border border-emerald-100">
+            <div className="bg-white rounded-2xl p-6 border border-[#DDD3C2]">
               <div className="flex items-center mb-4">
-                <Clock className="w-6 h-6 text-emerald-600 mr-3" />
-                <h3 className="font-bold text-slate-800">Horário de Atendimento</h3>
+                <Clock className="w-6 h-6 text-[#556B2F] mr-3" />
+                <h3 className="font-bold text-[#3F4A3C]">Horário de Atendimento</h3>
               </div>
-              <div className="space-y-2 text-sm text-slate-600">
-                <div className="flex justify-between">
-                  <span>Segunda - Sexta</span>
-                  <span className="font-medium">8:00 - 18:00</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Sábado</span>
-                  <span className="font-medium">9:00 - 15:00</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Domingo</span>
-                  <span className="font-medium">Fechado</span>
-                </div>
-              </div>
+
+              <p className="text-sm text-[#6F6A60]">
+                <strong>Segunda à sexta-feira:</strong> 9h às 18h
+              </p>
             </div>
 
-            {/* Testimonial */}
-            <div className="bg-slate-800 rounded-2xl p-6 text-white">
-              <div className="flex items-center mb-4">
+            {/* Avaliações — Zaask */}
+            <div className="bg-white rounded-2xl p-6 border border-[#DDD3C2]">
+              <div className="flex items-center mb-3">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                  <Star key={i} className="w-4 h-4 text-yellow-500 fill-current" />
                 ))}
               </div>
-              <p className="text-slate-300 italic mb-4">
-                "Serviço impecável! Transformaram completamente o nosso jardim."
+
+              <p className="text-[#6F6A60] mb-3">
+                Avaliações reais dos nossos clientes:
               </p>
-              <p className="text-sm text-slate-400">- Cliente satisfeito, Cascais</p>
+
+              <a 
+                href="https://www.zaask.pt/avaliar-sp/713072"
+                target="_blank"
+                className="text-[#556B2F] font-semibold underline hover:text-[#3F4A3C]"
+              >
+                Ver avaliações no Zaask
+              </a>
             </div>
+
           </div>
 
           {/* Contact Form */}
           <div className="lg:col-span-2">
-            <div className="bg-slate-50 rounded-3xl p-8">
-              <h3 className="text-2xl font-bold text-slate-800 mb-6">
+            <div className="bg-white rounded-3xl p-8 border border-[#DDD3C2]">
+
+              <h3 className="text-2xl font-bold text-[#3F4A3C] mb-6">
                 Envie uma Mensagem
               </h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">
+
                 <div className="grid md:grid-cols-2 gap-6">
+                  
                   <div>
-                    <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mb-2">
+                    <label className="block text-sm font-semibold text-[#3F4A3C] mb-2">
                       Nome *
                     </label>
                     <input
                       type="text"
-                      id="name"
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all bg-white"
+                      className="w-full px-4 py-3 border border-[#C7BBA8] rounded-xl bg-[#FAF7F2] focus:ring-2 focus:ring-[#556B2F]"
                       placeholder="O seu nome"
                       required
                     />
                   </div>
-                  
+
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-semibold text-slate-700 mb-2">
+                    <label className="block text-sm font-semibold text-[#3F4A3C] mb-2">
                       Telefone
                     </label>
                     <input
                       type="tel"
-                      id="phone"
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all bg-white"
+                      className="w-full px-4 py-3 border border-[#C7BBA8] rounded-xl bg-[#FAF7F2] focus:ring-2 focus:ring-[#556B2F]"
                       placeholder="O seu telefone"
                     />
                   </div>
+
                 </div>
-                
+
                 <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-slate-700 mb-2">
+                  <label className="block text-sm font-semibold text-[#3F4A3C] mb-2">
                     E-mail *
                   </label>
                   <input
                     type="email"
-                    id="email"
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all bg-white"
+                    className="w-full px-4 py-3 border border-[#C7BBA8] rounded-xl bg-[#FAF7F2] focus:ring-2 focus:ring-[#556B2F]"
                     placeholder="O seu e-mail"
                     required
                   />
                 </div>
-                
+
                 <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-slate-700 mb-2">
+                  <label className="block text-sm font-semibold text-[#3F4A3C] mb-2">
                     Mensagem *
                   </label>
                   <textarea
-                    id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
                     rows={6}
-                    className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all resize-none bg-white"
+                    className="w-full px-4 py-3 border border-[#C7BBA8] rounded-xl bg-[#FAF7F2] focus:ring-2 focus:ring-[#556B2F]"
                     placeholder="Conte-nos sobre o seu projeto..."
                     required
                   ></textarea>
                 </div>
-                
+
                 <button
                   type="submit"
-                  className="w-full flex items-center justify-center px-8 py-4 bg-gradient-to-r from-emerald-600 to-green-500 text-white font-bold rounded-2xl hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+                  className="w-full flex items-center justify-center px-8 py-4 bg-[#556B2F] text-white font-bold rounded-2xl hover:opacity-90 transition-all"
                 >
                   <Send className="w-5 h-5 mr-3" />
                   Enviar Mensagem
                 </button>
+
               </form>
 
-              <p className="text-sm text-slate-500 mt-4 text-center">
-                Responderemos em até 24 horas
+              <p className="text-sm text-[#6F6A60] mt-4 text-center">
+                Responderemos em até 24h
               </p>
+
             </div>
           </div>
+
         </div>
       </div>
     </section>
