@@ -18,8 +18,8 @@ const Header = () => {
     { href: '#about', label: 'Sobre' },
     { href: '#services', label: 'Serviços' },
     { href: '#process', label: 'Processo' },
-    { href: '#portfolio', label: 'Trabalhos' },
-    { href: '#contact', label: 'Contato' },
+    { href: '#portfolio', label: 'portfolio' },
+    { href: '#contact', label: 'contacto' },
   ];
 
   const scrollToSection = (href: string) => {
