@@ -4,8 +4,9 @@ import react from '@vitejs/plugin-react';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/jardins-site/', // 👈 adicionado para o GitHub Pages
+  base: './', // 👈 CORRETO PARA VERCEL
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
 });
+
