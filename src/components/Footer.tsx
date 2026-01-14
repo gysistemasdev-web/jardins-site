@@ -1,84 +1,93 @@
-import React from 'react';
-import { Instagram, MessageCircle } from 'lucide-react';
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
+    <!-- SEO: Título otimizado -->
+    <title>Jardins São Paulo – Jardinagem em Cascais, Manutenção e Paisagismo</title>
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+    <!-- SEO: Descrição -->
+    <meta name="description" content="Jardins São Paulo oferece jardinagem profissional em Cascais, Lisboa e arredores. Realizamos manutenção de jardins, limpeza, corte de relva, podas, revitalização e paisagismo com excelência e atendimento rápido.">
 
-  return (
-    <footer className="bg-[#3F2F1C] text-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-          
-          {/* Logo + descrição */}
-          <div className="lg:col-span-1">
-            <div
-              className="flex items-center mb-6 cursor-pointer justify-center lg:justify-start"
-              onClick={scrollToTop}
-            >
-              <img
-                src="https://github.com/gysistemasdev-web/JARDINS-S-O-PAULO/blob/1152df9deab2eac2f66a71ac00bf7b6257f4b0c7/logoJSP-branco.png?raw=true"
-                alt="Logo Jardins São Paulo"
-                className="h-20 w-auto object-contain"
-              />
-            </div>
+    <!-- SEO: Palavras-chave -->
+    <meta name="keywords" content="jardinagem cascais, jardinagem lisboa, jardinagem portugal, manutenção de jardins, limpeza de jardins, corte de relva, poda de árvores, paisagismo cascais, jardinssp, jardins são paulo, jardineiro cascais">
 
-            <p className="text-[#E8E2D9] leading-relaxed max-w-md">
-              Jardinagem, paisagismo e serviços especializados.
-            </p>
+    <!-- SEO técnico -->
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="pt-PT">
+    <meta name="author" content="Jardins São Paulo">
 
-            {/* Socials */}
-            <div className="flex items-center space-x-4 mt-6">
-              <a
-                href="https://instagram.com/jardinssaopaulopt"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-[#4A3A28] rounded-xl flex items-center justify-center hover:bg-[#75624C] transition-colors"
-              >
-                <Instagram className="w-5 h-5 text-white" />
-              </a>
+    <!-- Open Graph (WhatsApp, Instagram, Facebook) -->
+    <meta property="og:title" content="Jardins São Paulo – Jardinagem Profissional em Cascais">
+    <meta property="og:description" content="Serviços completos de jardinagem, manutenção e paisagismo. Atendemos Cascais e região com excelência.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jardinssp.pt">
+    <meta property="og:image" content="https://jardinssp.pt/imagem-capa.jpg"> <!-- opcional: adicione uma imagem -->
 
-              <a
-                href="https://wa.me/351939363007"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-[#4A3A28] rounded-xl flex items-center justify-center hover:bg-[#75624C] transition-colors"
-              >
-                <MessageCircle className="w-5 h-5 text-white" />
-              </a>
-            </div>
-          </div>
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jardins São Paulo – Jardinagem Profissional">
+    <meta name="twitter:description" content="Jardinagem, manutenção e paisagismo em Cascais">
 
-          {/* Áreas de atuação */}
-          <div>
-            <h4 className="text-lg font-bold text-[#D4C8B8] mb-6">
-              Áreas de Atuação
-            </h4>
+    <!-- Pré-conexão para melhorar desempenho -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-            <div className="space-y-2 text-[#E8E2D9] text-sm">
-              <p>• Cascais</p>
-              <p>• Sintra</p>
-            </div>
-          </div>
+    <!-- Fontes Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-          {/* Espaço vazio (removido: contactos + serviços) */}
-          <div></div>
-        </div>
+    <!-- Google Translate (oculto) -->
+    <style>
+      .goog-te-banner-frame.skiptranslate,
+      .goog-logo-link,
+      .goog-te-gadget span {
+        display: none !important;
+      }
+      body {
+        top: 0px !important;
+      }
+    </style>
 
-        {/* Bottom Section */}
-        <div className="border-t border-[#4A3A28] mt-12 pt-8 text-center">
-          <p className="text-[#C6BAA6] text-sm">
-            © {currentYear} Jardins São Paulo. Todos os direitos reservados.
-          </p>
-        </div>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: 'pt',
+            includedLanguages: 'en',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+          },
+          'google_translate_element'
+        );
+      }
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </head>
 
-      </div>
-    </footer>
-  );
-};
+  <body>
+    <div id="root"></div>
 
-export default Footer;
+    <!-- Google Translate oculto -->
+    <div id="google_translate_element" style="display: none;"></div>
+
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Zaask widget (selo de avaliações) -->
+    {/* Zaask (selo) */}
+<a
+  target="_blank"
+  rel="noopener noreferrer"
+  href="https://www.zaask.pt/user/onevirgardens2"
+  className="inline-flex mt-6 opacity-90 hover:opacity-100 transition-opacity"
+>
+  <img
+    src="https://www.zaask.pt/widget?user=713072&widget=review"
+    alt="Avaliações na Zaask"
+    className="h-10 w-auto rounded-md"
+    loading="lazy"
+  />
+</a>
+
+  </body>
+</html>
